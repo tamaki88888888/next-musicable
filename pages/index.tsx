@@ -1,12 +1,10 @@
 import { useEffect } from "react";
 //webpackなどを読んでくれているから重要
-import Head from 'next/head'
+import Head from 'next/head';
 //画像の最適化コンポーネント next/image が使えるようになる
-import Image from 'next/image'
+import Image from 'next/image';
 //css modules の書き方です
-// import styles from 'styles/pages/index.module.scss'
-import styles1 from '../styles/Home.module.css'
-import scss from '../styles/index.module.scss'
+import scss from '../styles/pages/index.module.scss';
 
 //contentful をインポート
 import * as contentful from "contentful";
@@ -31,7 +29,6 @@ export default function Home() {
         <title>musicable</title>
       </Head>
       <div className={scss.ex}>たまかい</div>
-        <div className={styles1.test}>tamaki</div>
     </div>
   );
 }
