@@ -4,7 +4,8 @@ import Head from 'next/head'
 //画像の最適化コンポーネント next/image が使えるようになる
 import Image from 'next/image'
 //css modules の書き方です
-import styles from '../styles/globals.css'
+//相対パスが機能しないのは BaseUrl が設定されていないから
+import styles from 'styles/pages/index.module.scss'
 //contentful をインポート
 import * as contentful from "contentful";
 const client = contentful.createClient({
