@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Head from 'next/head';
 //画像の最適化コンポーネント next/image が使えるようになる
 import Image from 'next/image';
-//css modules の書き方です
+//pages/index.tsx には styles/pages/index.module.scss を追加する
 import scss from '../styles/pages/index.module.scss';
 
 //contentful をインポート
@@ -29,6 +29,7 @@ export default function Home() {
         <title>musicable</title>
       </Head>
       <div className={scss.ex}>たまかい</div>
+      <Image src="/pages/musicable.png" alt="Vercel Logo" width={72} height={16} />
     </div>
   );
 }
