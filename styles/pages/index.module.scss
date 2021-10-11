@@ -1,4 +1,5 @@
-@import "../variables.scss";
+//sassの機能を書いたscssを追加
+@import "../variables.module.scss";
 // 呼び出しの例 
 .logo {
     width: 200px;
