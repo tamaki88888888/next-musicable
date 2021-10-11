@@ -4,7 +4,7 @@ import Head from 'next/head';
 //画像の最適化コンポーネント next/image が使えるようになる
 import Image from 'next/image';
 //pages/index.tsx には styles/pages/index.module.scss を追加する
-import scss from '../styles/pages/index.module.scss';
+import styles from '../styles/pages/index.module.scss';
 
 //contentful をインポート
 import * as contentful from "contentful";
@@ -28,8 +28,9 @@ export default function Home() {
       <Head>
         <title>musicable</title>
       </Head>
-      <div className={scss.ex}>たまかい</div>
-      <Image className={scss.image} src="/pages/musicable.png" alt="Musicable logo" width={200} height={112} />
+      <div className={styles.logo} >
+        <Image src="/pages/musicable.png" alt="Musicable logo" width={200} height={112} />
+      </div>
     </div>
   );
 }

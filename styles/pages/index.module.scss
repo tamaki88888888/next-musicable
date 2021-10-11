@@ -1,14 +1,10 @@
-//パーツごとに追加
-.ex{
-    background-color: black;
-}
-
-.image{
-    margin: 0;
-    background: yellow;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+@import "../variables.scss";
+// 呼び出しの例 
+.logo {
+    width: 200px;
+  
+    // ↓768px以下で適用したいCSS
+    @include mq(md) {
+       width: 100px;
+    }
 }
