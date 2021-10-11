@@ -29,7 +29,7 @@ export default function Home() {
         <title>musicable</title>
       </Head>
       <div className={scss.ex}>たまかい</div>
-      <Image src="/pages/musicable.png" alt="Vercel Logo" width={72} height={16} />
+      <Image className={scss.image} src="/pages/musicable.png" alt="Musicable logo" width={200} height={112} />
     </div>
   );
 }
