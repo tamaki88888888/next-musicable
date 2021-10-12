@@ -30,7 +30,12 @@ export default function Home() {
       </Head>
       <div className={styles.logo} >
         <Image src="/pages/musicable.png" alt="Musicable logo" width={200} height={112} />
+        <div>develop</div>
+        <div>music</div>
+        <div>github</div>
+        <div>情報を出してみる</div>
       </div>
+      <div>キジデース</div>
     </div>
   );
 }

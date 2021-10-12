@@ -3,7 +3,10 @@
 
 // 呼び出しの例 
 .logo {
-    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
   
     // ↓768px以下で適用したいCSS
     @include mq(md) {
