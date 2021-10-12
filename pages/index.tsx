@@ -5,6 +5,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 //pages/index.tsx には styles/pages/index.module.scss を追加する
 import styles from '../styles/pages/index.module.scss';
+//リンクタグ
+import Link from 'next/link'
 
 //contentful をインポート
 import * as contentful from "contentful";
@@ -35,7 +37,10 @@ export default function Home() {
         <div>github</div>
         <div>情報を出してみる</div>
       </div>
-      <div>キジデース</div>
+      <div>記事の一覧をここに</div>
+      <Link href="https://github.com/tamaki88888888">
+        <a>git hubのリンク</a>
+      </Link>
     </div>
   );
 }
