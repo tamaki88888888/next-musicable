@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link'
@@ -13,10 +13,11 @@ const client = contentful.createClient({
 });
 
 export default function Home() {
+  const [entries, setEntries] = useState();
   async function fetchEntries() {
     const entries = await client.getEntries();
-    console.log(entries);
   }
+
   useEffect(() => {
     (async() => {
       await fetchEntries();
@@ -31,14 +32,17 @@ export default function Home() {
         <Image src="/pages/musicable.png" alt="Musicable logo" width={200} height={112} />
         <div>develop</div>
         <div>music</div>
-        <div>github</div>
-        <div>情報を出してみる</div>
+        <Link href="https://github.com/tamaki88888888">
+          <a>git hubのリンク</a>
+        </Link>
       </div>
       <div>記事の一覧をここに</div>
-      <Article />
-      <Link href="https://github.com/tamaki88888888">
-        <a>git hubのリンク</a>
-      </Link>
+      <ArticleList articleData={entries.items} />
     </div>
   );
+}
+
+const ArticleList = (props) => {
+  const articleData = props
+  return <h1>Hello,</h1>;
 }
