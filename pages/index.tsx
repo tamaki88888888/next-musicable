@@ -13,16 +13,19 @@ const client = contentful.createClient({
 });
 
 export default function Home() {
-  const [entries, setEntries] = useState();
+
   async function fetchEntries() {
     const entries = await client.getEntries();
+    return entries;
   }
 
   useEffect(() => {
     (async() => {
-      await fetchEntries();
+      const res = await fetchEntries();
+      console.log(res.items);
     })();
   }, []);
+
   return (
     <div>
       <Head>
@@ -37,10 +40,12 @@ export default function Home() {
         </Link>
       </div>
       <div>記事の一覧をここに</div>
-      <ArticleList articleData={entries.items} />
+      {/* <ArticleList articleData={entries.items} /> */}
     </div>
   );
 }
+
+
 
 const ArticleList = (props) => {
   const articleData = props
