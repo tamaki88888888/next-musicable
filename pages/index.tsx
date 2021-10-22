@@ -5,26 +5,33 @@ import Link from 'next/link'
 import styles from '../styles/pages/index.module.scss';
 import Article from '../components/article';
 
-//contentful をインポート
-import * as contentful from "contentful";
-const client = contentful.createClient({
-  accessToken: "ZdOfpib3z3Q12HCPwhHZP4qOIYPM3bqD8X36pp6gcak",
-  space: "w8l69ez742p4"
-});
+//contentfulとコネクションを貼る
+import { createClient } from "contentful";
 
-export default function Home() {
+//contentful用のidを設定
+export async function getStaticProps() {
 
-  async function fetchEntries() {
-    const entries = await client.getEntries();
-    return entries;
+  const client = createClient({
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+  });
+
+  console.log( client );
+
+  const res = await client.getEntries({ content_type: 'Blog'});
+
+
+  return {
+    props: {
+      recipes: res.items
+    }
   }
 
-  useEffect(() => {
-    (async() => {
-      const res = await fetchEntries();
-      console.log(res.items);
-    })();
-  }, []);
+}
+
+export default function Home({ recipes }) {
+
+  console.log(recipes);
 
   return (
     <div>
