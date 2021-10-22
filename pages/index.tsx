@@ -16,22 +16,19 @@ export async function getStaticProps() {
     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
   });
 
-  console.log( client );
-
-  const res = await client.getEntries({ content_type: 'Blog'});
-
+  const res = await client.getEntries({});
 
   return {
     props: {
-      recipes: res.items
+      articles: res.items
     }
   }
 
 }
 
-export default function Home({ recipes }) {
+export default function Home({ articles }) {
 
-  console.log(recipes);
+  console.log(articles);
 
   return (
     <div>
@@ -47,14 +44,14 @@ export default function Home({ recipes }) {
         </Link>
       </div>
       <div>記事の一覧をここに</div>
-      {/* <ArticleList articleData={entries.items} /> */}
+      <div className="article-list">
+        {articles.map(article => (
+          <Article
+            key={article.sys.id}
+            article={article}
+          />
+        ))}
+      </div>
     </div>
   );
-}
-
-
-
-const ArticleList = (props) => {
-  const articleData = props
-  return <h1>Hello,</h1>;
 }
