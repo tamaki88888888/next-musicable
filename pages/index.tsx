@@ -16,7 +16,7 @@ export async function getStaticProps() {
     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
   });
 
-  const res = await client.getEntries({});
+  const res = await client.getEntries({ content_type: "article" });
 
   return {
     props: {

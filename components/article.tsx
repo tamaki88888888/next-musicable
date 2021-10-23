@@ -3,8 +3,8 @@ import Image from "next/image"
 
 const Article = ({ article }) => {
 
-  const { title, siteUrl, thumbnail } = article.fields
-  console.log("https:" + thumbnail.fields.file.url)
+  const { title, slug, thumbnail } = article.fields
+  console.log(slug)
 
   return (
     <div className="article">
@@ -20,7 +20,7 @@ const Article = ({ article }) => {
           <h4>{ title }</h4>
         </div>
         <div className="actions">
-          <Link href={"/posts/" + siteUrl }><a>linkです</a></Link>
+          <Link href={"/posts/" + slug }><a>linkです</a></Link>
         </div>
       </div>
     </div>
