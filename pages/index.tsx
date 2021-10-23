@@ -52,6 +52,13 @@ export default function Home({ articles }) {
           />
         ))}
       </div>
+      <style jsx>{`
+        .article-list{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 20@x 60px;
+        }
+      `}</style>
     </div>
   );
 }
