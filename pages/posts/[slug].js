@@ -1,4 +1,6 @@
 import { createClient } from "contentful";
+import Image from "next/image";
+import { div } from "prelude-ls";
 
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -27,9 +29,6 @@ export const getStaticPaths = async () => {
 }
 
 export async function getStaticProps({ params }) {
-
-  //getStaticProps内だとparamsがとれる？
-  console.log(params)
   
   const { items } = await client.getEntries({
     content_type: "article",
@@ -43,7 +42,18 @@ export async function getStaticProps({ params }) {
 
 
 export default function ArticleDetails({ article }) {
+  const { thumbnail, Title, detail} = article.fields
+
   return (
-    <p>details </p>
+    <div>
+      <div className="banner">
+        <Image 
+          src={"https:" + thumbnail.fields.file.url}
+          width={thumbnail.fields.file.details.image.width}
+          height={thumbnail.fields.file.details.image.height}
+          /> 
+        <h2>{ Title }</h2>
+      </div>
+    </div>
   );
 };
