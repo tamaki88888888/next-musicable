@@ -43,6 +43,7 @@ export async function getStaticProps({ params }) {
 
 export default function ArticleDetails({ article }) {
   const { thumbnail, Title, detail} = article.fields
+  console.log(article.fields)
 
   return (
     <div>
