@@ -1,6 +1,6 @@
 import { createClient } from "contentful";
 import Image from "next/image";
-import { div } from "prelude-ls";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -53,6 +53,10 @@ export default function ArticleDetails({ article }) {
           height={thumbnail.fields.file.details.image.height}
           /> 
         <h2>{ Title }</h2>
+      </div>
+      <div className="detail">
+        <h3>detail</h3>
+        <div>{ documentToReactComponents(detail) }</div>
       </div>
     </div>
   );
