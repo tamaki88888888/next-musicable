@@ -4,7 +4,6 @@ import Image from "next/image"
 const Article = ({ article }) => {
 
   const { title, slug, thumbnail } = article.fields
-  console.log(slug)
 
   return (
     <div className="article">
