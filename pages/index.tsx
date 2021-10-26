@@ -1,9 +1,4 @@
-import { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link'
-import styles from '../styles/pages/index.module.scss';
-import Article from '../components/article';
+import { Container, Box, Heading } from '@chakra-ui/react';
 
 //contentfulとコネクションを貼る
 import { createClient } from "contentful";
@@ -27,36 +22,19 @@ export async function getStaticProps() {
 }
 
 export default function Home({ articles }) {
-
   return (
-    <div>
-      <Head>
-        <title>musicable</title>
-      </Head>
-      <div className={styles.logo} >
-        <Image src="/pages/musicable.png" alt="Musicable logo" width={200} height={112} />
-        <div>develop</div>
-        <div>music</div>
-        <Link href="https://github.com/tamaki88888888">
-          <a>git hubのリンク</a>
-        </Link>
-      </div>
-      <div>記事の一覧をここに</div>
-      <div className="article-list">
-        {articles.map(article => (
-          <Article
-            key={article.sys.id}
-            article={article}
-          />
-        ))}
-      </div>
-      <style jsx>{`
-        .article-list{
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-gap: 20@x 60px;
-        }
-      `}</style>
-    </div>
+    <Container>
+      <Box borderRadius="lg" bg="red" p={3} mb={6} align="center">
+        Hi, I'm a music-writer based in Japan!
+      </Box>
+      <Box display={{md: "flex"}}>
+        <Box flexGrow={1}>
+          <Heading as="h2" variant="page-title">
+            Ko Tamaki
+          </Heading>
+          <p>Web Developer ( Developer / writer / music-media )</p>
+        </Box>
+      </Box>
+    </Container>
   );
 }
