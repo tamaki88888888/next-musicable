@@ -1,8 +1,9 @@
-import { useState, useEffect, useRef, useCallbak } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Box, Spinner } from "@chakra-ui/react";
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/model'
+import { animate } from "framer-motion";
 
 function easeOutCirc(x) {
     return Math.sqrt(1 - Math.pow(x - 1, 4))
@@ -23,6 +24,15 @@ const VoxelDog = () => {
     )
     const [scene] = useState(new THREE.Scene())
     const [_controls, setControls] = useState()
+    const handleWindowResize = useCallback(() => {
+        const { current: container } = refContainer
+        if (container && renderer) {
+            const scW = container.clientWidth
+            const scH = container.clientHeight
+
+            renderer.setSize(scW, scH)
+        }
+    },[renderer])
 
     /* eslint-disable react-hools/exhauystive-deps */
     useEffect(() => {
@@ -35,7 +45,7 @@ const VoxelDog = () => {
                 antialias: true,
                 alpha: true
             })
-            renderer.setPixelRaito(window.devicePixelRaito)
+            renderer.setPixelRatio(window.devicePixelRaito)
             renderer.setSize(scW, scH)
             renderer.outputEncoding = THREE.sRGBEncoding
             container.appendChild(renderer.domElement)
@@ -47,7 +57,8 @@ const VoxelDog = () => {
             const camera = new THREE.OrthographicCamera(
                 -scale,
                 scale,
-                scale-scale,
+                scale,
+                -scale,
                 0.01,
                 50000
             )
@@ -55,7 +66,7 @@ const VoxelDog = () => {
             camera.lookAt(target)
             setCamera(camera)
 
-            const ambientLight = new THREE.AmbientLight(0xccccc, 1)
+            const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
             scene.add(ambientLight)
 
             const controls = new OrbitControls (camera, renderer.domElement)
@@ -67,17 +78,51 @@ const VoxelDog = () => {
                 receiveShadow: false,
                 castShadow: false
             }).then(() => {
+                animate()
                 setLoading(false)
             })
+
+            let req = null
+            let frame = 0
+            const animate = () => {
+                req = requestAnimationFrame(animate)
+
+                frame = frame <= 100 ? frame + 1 : frame
+
+                if(frame <= 100) {
+                    const p = initialCameraPosition
+                    const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
+
+                    camera.position.y = 10
+                    camera.position.x = p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
+                    camera.position.z = p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed)
+                    camera.lookAt(target)
+                } else {
+                    controls.update()
+                }
+                renderer.render(scene, camera)
+            }
+
+            return () => {
+                cancelAnimationFrame(req)
+                renderer.dispose()
+            }
         }
     }, [])
+
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowResize,false)
+        return() => {
+            window.removeEventListener('resize', handleWindowResize,false)
+        }
+    }, [renderer, handleWindowResize])
 
     return (
         <Box 
             ref={refContainer} 
             className='voxel-dog'
             m="auto"
-            at={['-20px','-60px','-120px']}
+            mt={['-20px','-60px','-120px']}
             mb={['-40px','-140px','-200px']}
             w={[280 ,480 ,640]}
             h={[280, 480, 640]}

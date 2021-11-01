@@ -1,11 +1,11 @@
 import  { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-export function c(
+export function loadGLTFModel(
     scene,
     glbPath,
     options = { recieveShadow: true, castShadow: true}
 )   {
-    const { recieveShadow, castShadow } = options
+    const { receiveShadow, castShadow } = options
     return new Promise((resolve, reject) => {
         const loader = new GLTFLoader()
 
@@ -23,7 +23,7 @@ export function c(
                 obj.traverse(function(child){
                     if(child.isMesh){
                         child.castShadow = castShadow
-                        child.receiveShadow =  receiveShadow
+                        child.receiveShadow = receiveShadow
                     }
                 })
 
