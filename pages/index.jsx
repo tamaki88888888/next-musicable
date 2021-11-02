@@ -26,10 +26,9 @@ export async function getStaticProps() {
       articles: res.items
     }
   }
-
 }
 
-//Imageコンポーネント用に自分のプロフィール画像を追加する
+//export default function Home({ articles }) { contentfulが使えなかったら削除
 export default function Home({ articles }) {
   return (
     <Layout>
