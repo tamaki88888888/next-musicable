@@ -98,8 +98,7 @@ const Navbar = props => {
                     </Box>
                 </Box>
             </Container>
-            Navbar
-        </Box>   
+        </Box>
     )
 }
 
