@@ -1,10 +1,13 @@
-import { Container, Box, Heading, Image, Link, useColorModeValue, Button } from '@chakra-ui/react';
+import { Container, Box, Heading, Image, Link, List, ListItem, useColorModeValue, Button, SimpleGrid, Icon } from '@chakra-ui/react';
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import Layout from '../components/section/article'
+import { GridItem } from 'components/grid-item';
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+
 //contentfulとコネクションを貼る
 import { createClient } from "contentful";
 
@@ -87,7 +90,7 @@ export default function Home({ articles }) {
             Born in Okinawa (沖縄), Japan.
           </BioSection>
           <BioYear>202</BioYear>
-        </Section>
+        </Section>  
         <Section delay={0.3}>
           <Heading as="h3" bariant="section-title">
             I 🤍
@@ -95,6 +98,46 @@ export default function Home({ articles }) {
           <Paragraph>
             好きなこと
           </Paragraph>
+        </Section>
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            On the web
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="https://github.com/tamaki88888888" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal" 
+                  leftIcon={<Icon as={IoLogoGithub} 
+                />}>
+                  @tamaki88888888
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://twitter.com/koukoukokoko" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal" 
+                  leftIcon={<Icon as={IoLogoTwitter} 
+                />}>
+                  @koukoukokoko
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://www.instagram.com/koutamakin/" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal" 
+                  leftIcon={<Icon as={IoLogoInstagram} 
+                />}>
+                  @koutamakin
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
         </Section>
       </Container>
     </Layout>
