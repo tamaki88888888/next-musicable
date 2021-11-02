@@ -34,7 +34,7 @@ export default function Home({ articles }) {
     <Layout>
       <Container>
         <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} align="center">
-          Hi, I'm a music-writer based in Japan!
+          Hi, I&apos;m a music-writer based in Japan!
         </Box>
         <Box display={{md: "flex"}}>
           <Box flexGrow={1}>

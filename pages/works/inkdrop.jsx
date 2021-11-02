@@ -26,7 +26,7 @@ const Work = () => {
                         <ListItem>
                             <Meta>Blogpost</Meta>
                             <Link href="https://blog">
-                                How i've Attracted <ExternalLinkIcon mx="2px"/>
+                                How i&apos;ve Attracted <ExternalLinkIcon mx="2px"/>
                             </Link>
                         </ListItem>
                     </List>
