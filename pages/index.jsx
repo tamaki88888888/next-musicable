@@ -29,7 +29,7 @@ export async function getStaticProps() {
 }
 
 //export default function Home({ articles }) { contentfulが使えなかったら削除
-export default function Home({ articles }) {
+export default function Home() {
   return (
     <Layout>
       <Container>
