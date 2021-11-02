@@ -1,14 +1,10 @@
 import { Container, Heading, SimpleGrid } from "@chakra-ui/react";
+//simplegridはカラム作成に使う
 import Layout from '../components/section/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 
 import thumbFishWorkflow from '../public/images/contents/musicable.png'
-import thumbMyDeskSetup from '../public/images/contents/musicable.png'
-import thumb500PaidUsers from '../public/images/contents/musicable.png'
-import thumbFinancialGoal from '../public/images/contents/musicable.png'
-import thumbHowToPriceYourself from '../public/images/contents/musicable.png'
-import thumb50xFaster from '../public/images/contents/musicable.png'
 
 const Posts = () => (
     <Layout title="Posts">

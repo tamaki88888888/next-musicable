@@ -1,10 +1,8 @@
-import { Container, Heading, SimpleGrid, Divider } from "@chakra-ui/react";
+import { Container, Heading, SimpleGrid} from "@chakra-ui/react";
 import Section  from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
-import Layout from '../components/section/article'
-
-//ここに自分がやったこととかを描いていく
-// import thumbInkdrop from '../punlic/images/works/inkdrop.png'
+// import Layout from '../components/section/article'
+import thumbInkdrop from '../public/images/works/musicable.png'
 
 const Works = () => {
     return (
@@ -14,13 +12,18 @@ const Works = () => {
                     Works
                 </Heading>
                 <SimpleGrid columns={[1,1,2]} gap={6}>
-                    {/* もし何か開発していたら描いたらいいよね */}
-                    {/* <Section>
-                        <WorkGridItem id="inkdrop" title="Inkdrop" thumbnail={thumbInkDrop}>
+                    <Section>
+                        <WorkGridItem id="worka" title="Inkdropa" thumbnail={thumbInkdrop}>
                             A markdown note taking app
                             encrypted data sync support
                         </WorkGridItem>
-                    </Section> */}
+                    </Section>
+                    <Section>
+                        <WorkGridItem id="workb" title="Inkdropb" thumbnail={thumbInkdrop}>
+                            A markdown note taking app
+                            encrypted data sync support
+                        </WorkGridItem>
+                    </Section>
                 </SimpleGrid>
             </Container>
         </layout>

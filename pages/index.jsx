@@ -1,11 +1,10 @@
-import { Container, Box, Heading, Image, Link, List, ListItem, useColorModeValue, Button, SimpleGrid, Icon } from '@chakra-ui/react';
+import { Container, Box, Heading, Image, Link, List, ListItem, useColorModeValue, Button, Icon } from '@chakra-ui/react';
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import Layout from '../components/section/article'
-import { GridItem } from 'components/grid-item';
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 
 //contentfulとコネクションを貼る
@@ -89,7 +88,7 @@ export default function Home() {
             Born in Okinawa (沖縄), Japan.
           </BioSection>
           <BioYear>202</BioYear>
-        </Section>  
+        </Section>
         <Section delay={0.3}>
           <Heading as="h3" bariant="section-title">
             I 🤍
@@ -98,7 +97,7 @@ export default function Home() {
             好きなこと
           </Paragraph>
         </Section>
-        <Section delay={0.3}>
+        <Section delay={0.4}>
           <Heading as="h3" variant="section-title">
             On the web
           </Heading>
