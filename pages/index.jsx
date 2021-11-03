@@ -55,7 +55,7 @@ export default function Home() {
               maxWidth="100px"
               display="inline-block"
               borderRadius="full"
-              src="/images/tamaki.jpg"
+              src="/images/contents/musicable.png"
               alt=" Profile Image"
             />
           </Box>
@@ -107,8 +107,8 @@ export default function Home() {
                 <Button
                   variant="ghost"
                   colorScheme="teal" 
-                  leftIcon={<Icon as={IoLogoGithub} 
-                />}>
+                  leftIcon={<Icon as={IoLogoGithub} />}
+                >
                   @tamaki88888888
                 </Button>
               </Link>
