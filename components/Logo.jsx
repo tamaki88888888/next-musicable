@@ -17,6 +17,7 @@ const LogoBox = styled.span `
     }
 `
 
+//Logo.jsxに変更
 const Logo = () => {
     const footPrintImg = `/musicable${useColorModeValue('','-dark')}.png`
 
