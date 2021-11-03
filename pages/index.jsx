@@ -5,7 +5,7 @@ import { BioSection, BioYear } from '../components/bio'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import Layout from '../components/section/article'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub ,IoPizza } from 'react-icons/io5'
 
 //contentfulとコネクションを貼る
 // import { createClient } from "contentful";
@@ -33,7 +33,7 @@ export default function Home() {
     <Layout>
       <Container>
         <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} align="center">
-          Hi, I&apos;m a music-writer based in Japan!
+          I&apos;m a creater in Japan ! Hello from the other side ! 
         </Box>
         <Box display={{md: "flex"}}>
           <Box flexGrow={1}>
@@ -65,11 +65,14 @@ export default function Home() {
             Work
           </Heading>
           <Paragraph>
-            Ko is a freelance and a web Developer
-            <NextLink href="/works/inkdrop">
+            Ko is a freelance and a Front-end developer based in Tokyo n Kamakura 
+            with a passion for building Homepage and Web Application. 
+            Especially in building HomePage, there are thousands of thousands of tips in his body.
+            when not online, he loves camping with his music list.
+
+            {/* <NextLink href="/works/inkdrop">
               <Link>Inkdrop</Link>
-            </NextLink>
-            .
+            </NextLink> */}
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/works">
@@ -132,6 +135,17 @@ export default function Home() {
                   leftIcon={<Icon as={IoLogoInstagram} 
                 />}>
                   @koutamakin
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://okinawanpizza.hatenablog.com/" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal" 
+                  leftIcon={<Icon as={IoPizza} 
+                />}>
+                  https://okinawanpizza.hatenablog.com/
                 </Button>
               </Link>
             </ListItem>
