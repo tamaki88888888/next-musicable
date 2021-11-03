@@ -44,10 +44,10 @@ export default function Home() {
             <p>Web Developer ( Developer / writer / music-media )</p>
           </Box>
           <Box
-            flexShrink={0} 
+            flexShrink={0}
             mt={{base: 4, md: 0}}
             ml={{ md: 6 }}
-            aligm="center"
+            align="center"
           >
             <Image
               borderColor="whiteArpha.800"
@@ -70,10 +70,11 @@ export default function Home() {
             with a passion for building Homepage and Web Application. 
             Especially in building HomePage, there are thousands of thousands of tips in his body.
             when not online, he loves camping with his music playlist.
-            He live on 
+            He live on {' '}
             <NextLink href="https://www.instagram.com/p/BnzuGFUh69S/">
-              <Link> Pizza. </Link>
+              <Link>Pizza</Link>
             </NextLink>
+             .
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/works">
@@ -113,7 +114,11 @@ export default function Home() {
             I 🤍
           </Heading>
           <Paragraph>
-            好きなこと
+            Music, Radio({''}
+              <Link href="https://youtu.be/SfbpJGwqtmo?t=133">
+                as MC
+              </Link>
+            ), Playing Guiter, web design, Traveling
           </Paragraph>
         </Section>
         <Section delay={0.4}>
