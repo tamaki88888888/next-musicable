@@ -29,6 +29,7 @@ import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub ,IoPizza } from 'react-ico
 
 //export default function Home({ articles }) { contentfulが使えなかったら削除
 export default function Home() {
+  const thumbnail = `/images/thumbnail${useColorModeValue('-sydney','-pizza')}.png`
   return (
     <Layout>
       <Container>
@@ -55,7 +56,7 @@ export default function Home() {
               maxWidth="100px"
               display="inline-block"
               borderRadius="full"
-              src="/images/contents/musicable.png"
+              src={thumbnail}
               alt=" Profile Image"
             />
           </Box>

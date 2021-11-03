@@ -3,6 +3,8 @@ import Section  from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 // import Layout from '../components/section/article'
 import thumbAkitsuHP from '../public/images/works/Akitsudoro.png'
+import thumbMusicable from '../public/images/works/Musicable.png'
+import thumbDressup from '../public/images/works/Dressup.png'
 
 const Works = () => {
     return (
@@ -13,15 +15,19 @@ const Works = () => {
                 </Heading>
                 <SimpleGrid columns={[1,1,2]} gap={6}>
                     <Section>
-                        <WorkGridItem id="akitsudoro" title="Inkdropa" thumbnail={thumbAkitsuHP}>
+                        <WorkGridItem id="akitsudoro" title="Akitsudoro HP" thumbnail={thumbAkitsuHP}>
                             A corporate web site, witch is Akistu-doro Co., Ltd.
                             (秋津道路のホームページ)
                         </WorkGridItem>
                     </Section>
                     <Section>
-                        <WorkGridItem id="workb" title="Inkdropb" thumbnail={thumbAkitsuHP}>
-                            A markdown note taking app
-                            encrypted data sync support
+                        <WorkGridItem id="musicable" title="Musicable" thumbnail={thumbMusicable}>
+                            An American pops media. Comming soon at 2021.12.1
+                        </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem id="dressup" title="Dressup" thumbnail={thumbDressup}>
+                            An E-commerce site of wordpress theme. Comming soon at 2022.1.1
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>
