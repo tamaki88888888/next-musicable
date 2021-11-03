@@ -69,10 +69,10 @@ export default function Home() {
             with a passion for building Homepage and Web Application. 
             Especially in building HomePage, there are thousands of thousands of tips in his body.
             when not online, he loves camping with his music list.
-
-            {/* <NextLink href="/works/inkdrop">
-              <Link>Inkdrop</Link>
-            </NextLink> */}
+            and crazy for
+            <NextLink href="https://www.instagram.com/p/BnzuGFUh69S/">
+              <Link> Pizza</Link>
+            </NextLink>
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/works">

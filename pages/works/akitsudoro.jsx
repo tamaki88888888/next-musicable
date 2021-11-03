@@ -1,34 +1,38 @@
 import { Container, Badge, Link, List, ListItem  } from "@chakra-ui/react";
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, Meta } from "../../components/work";
+import { Title, Meta, WorkImage } from "../../components/work";
 import P from '../../components/paragraph'
 import Layout from '../../components/section/article'
 
 const Work = () => {
     return (
-        <Layout title="Inkdrop">
+        <Layout title="Akitsudoro">
             <Container>
                 <Title>
-                    inkdrop <Badge>20216</Badge>
+                    Akitsudoro - HP <Badge>2021</Badge>
                 </Title>
-                    <P>A Markdown note-taking app width 100+ plugins A Markdown note-taking app width 100+ plugins A Markdown note-taking app width 100+ plugins</P>
+                    <P>A company homepage site of Akistu-doro Co., Ltd. 
+                        witch is pavement construction company in Hokkaido. </P>
                     <List ml={4} my={4}>
                         <ListItem>
                             <Meta>Website</Meta>
                             <Link href="/">
-                                https://wwwwwwwwwww <ExternalLinkIcon mx="2px"/>
+                                https://akitsudoro.com/ <ExternalLinkIcon mx="2px"/>
                             </Link>
                         </ListItem>
                         <ListItem>
-                            <Meta>Platform</Meta>
-                            <span>Windows/macOS/Linux</span>
+                            <Meta>stack</Meta>
+                            <span>WordPress, AdobeXD</span>
                         </ListItem>
-                        <ListItem>
+                        <WorkImage src="/images/works/akitsudoro_01.png" alt="akitsudoro"></WorkImage>
+                        <WorkImage src="/images/works/akitsudoro_02.png" alt="akitsudoro"></WorkImage>
+                        <WorkImage src="/images/works/akitsudoro_03.png" alt="akitsudoro"></WorkImage>
+                        {/* <ListItem>
                             <Meta>Blogpost</Meta>
                             <Link href="https://blog">
                                 How i&apos;ve Attracted <ExternalLinkIcon mx="2px"/>
                             </Link>
-                        </ListItem>
+                        </ListItem> */}
                     </List>
             </Container>
         </Layout>

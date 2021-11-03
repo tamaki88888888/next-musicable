@@ -2,7 +2,7 @@ import { Container, Heading, SimpleGrid} from "@chakra-ui/react";
 import Section  from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 // import Layout from '../components/section/article'
-import thumbInkdrop from '../public/images/works/musicable.png'
+import thumbAkitsuHP from '../public/images/works/Akitsudoro.png'
 
 const Works = () => {
     return (
@@ -13,13 +13,13 @@ const Works = () => {
                 </Heading>
                 <SimpleGrid columns={[1,1,2]} gap={6}>
                     <Section>
-                        <WorkGridItem id="worka" title="Inkdropa" thumbnail={thumbInkdrop}>
-                            A markdown note taking app
-                            encrypted data sync support
+                        <WorkGridItem id="akitsudoro" title="Inkdropa" thumbnail={thumbAkitsuHP}>
+                            A corporate web site, witch is Akistu-doro Co., Ltd.
+                            (秋津道路のホームページ)
                         </WorkGridItem>
                     </Section>
                     <Section>
-                        <WorkGridItem id="workb" title="Inkdropb" thumbnail={thumbInkdrop}>
+                        <WorkGridItem id="workb" title="Inkdropb" thumbnail={thumbAkitsuHP}>
                             A markdown note taking app
                             encrypted data sync support
                         </WorkGridItem>
