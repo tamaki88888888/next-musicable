@@ -66,13 +66,13 @@ export default function Home() {
             Work
           </Heading>
           <Paragraph>
-            Ko is a freelance and a Front-end developer based in Tokyo n Kamakura 
+            Ko is a freelance and a Front-end developer based in Tokyo and Kanagawa 
             with a passion for building Homepage and Web Application. 
             Especially in building HomePage, there are thousands of thousands of tips in his body.
-            when not online, he loves camping with his music list.
-            and crazy for
+            when not online, he loves camping with his music playlist.
+            He live on 
             <NextLink href="https://www.instagram.com/p/BnzuGFUh69S/">
-              <Link> Pizza</Link>
+              <Link> Pizza. </Link>
             </NextLink>
           </Paragraph>
           <Box align="center" my={4}>
@@ -84,17 +84,32 @@ export default function Home() {
           </Box>
         </Section>
         <Section delay={0.2}>
-          <Heading as="h3" bariant="section-title">
+          <Heading as="h3" variant="section-title">
             Bio
           </Heading>
           <BioSection>
-          <BioYear>1984</BioYear>
+            <BioYear>1995</BioYear>
             Born in Okinawa (沖縄), Japan.
           </BioSection>
-          <BioYear>202</BioYear>
+          <BioSection>
+            <BioYear>2018</BioYear>
+            Worked at Sydney Central YHA. (シドニーセントラルYHA入社)
+          </BioSection>
+          <BioSection>
+            <BioYear>2020</BioYear>
+            Graduated school of Industrial Management at University Of The Ryukyus. (琉球大学観光産業科学部産業経営学科)
+          </BioSection>
+          <BioSection>
+            <BioYear>2020</BioYear>
+            Worked at Placole (株式会社プラコレ入社)
+          </BioSection>
+          <BioSection>
+            <BioYear>2022 to present</BioYear>
+            Work as a freelance
+          </BioSection>
         </Section>
         <Section delay={0.3}>
-          <Heading as="h3" bariant="section-title">
+          <Heading as="h3" variant="section-title">
             I 🤍
           </Heading>
           <Paragraph>
