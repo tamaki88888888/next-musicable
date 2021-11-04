@@ -67,14 +67,14 @@ export default function Home() {
           </Heading>
           <Paragraph>
             Ko is a freelance and a Front-end developer based in Tokyo and Kanagawa 
-            with a passion for building Homepage and Web Application. 
+            with a passion for building Homepage and Web Application.
             Especially in building HomePage, there are thousands of thousands of tips in his body.
             when not online, he loves camping with his music playlist.
             He live on {' '}
             <NextLink href="https://www.instagram.com/p/BnzuGFUh69S/">
               <Link>Pizza</Link>
             </NextLink>
-             .
+            .
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/works">
@@ -111,7 +111,7 @@ export default function Home() {
         </Section>
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            I 🤍
+            I ❤︎
           </Heading>
           <Paragraph>
             Music, Radio({''}
