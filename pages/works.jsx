@@ -3,8 +3,7 @@ import Section  from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 // import Layout from '../components/section/article'
 import thumbAkitsuHP from '../public/images/works/Akitsudoro.png'
-// import thumbMusicable from '../public/images/works/Musicable.png'
-import thumbMusicable from '../public/images/contents/musicable-work.png'
+import thumbMusicable from '../public/images/works/musicable-work.png'
 import thumbDressup from '../public/images/works/Dressup.png'
 
 
