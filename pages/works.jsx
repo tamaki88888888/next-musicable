@@ -3,7 +3,7 @@ import Section  from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 // import Layout from '../components/section/article'
 import thumbAkitsuHP from '../public/images/works/Akitsudoro.png'
-import thumbMusicable from '../public/images/works/Musicable.png'
+// import thumbMusicable from '../public/images/works/Musicable.png'
 import thumbDressup from '../public/images/works/Dressup.png'
 
 const Works = () => {
@@ -21,7 +21,7 @@ const Works = () => {
                         </WorkGridItem>
                     </Section>
                     <Section>
-                        <WorkGridItem id="musicable" title="Musicable" thumbnail={thumbMusicable}>
+                        <WorkGridItem id="musicable" title="Musicable" thumbnail={thumbAkitsuHP}>
                             An American pops media. Comming soon at 2021.12.1
                         </WorkGridItem>
                     </Section>
