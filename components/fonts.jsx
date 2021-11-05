@@ -1,4 +1,4 @@
-import { Global, css } from "@emotion/react"
+import { Global } from "@emotion/react"
 
 const Fonts = () => (
     //TODO:global styles の適用方法わからない

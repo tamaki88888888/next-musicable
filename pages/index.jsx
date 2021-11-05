@@ -93,19 +93,19 @@ export default function Home() {
             Born in Okinawa (沖縄), Japan.
           </BioSection>
           <BioSection>
-            <BioYear>2018</BioYear>
+            <BioYear>2016</BioYear>
             Worked at Sydney Central YHA. (シドニーセントラルYHA入社)
+          </BioSection>
+          <BioSection>
+            <BioYear>2019</BioYear>
+            Worked at Placole (株式会社プラコレ入社)
           </BioSection>
           <BioSection>
             <BioYear>2020</BioYear>
             Graduated school of Industrial Management at University Of The Ryukyus. (琉球大学観光産業科学部産業経営学科)
           </BioSection>
           <BioSection>
-            <BioYear>2020</BioYear>
-            Worked at Placole (株式会社プラコレ入社)
-          </BioSection>
-          <BioSection>
-            <BioYear>2022 to present</BioYear>
+            <BioYear>2022 and next</BioYear>
             Work as a freelance
           </BioSection>
         </Section>
