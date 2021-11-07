@@ -2,10 +2,10 @@ import Head from "next/head"
 import Navbar from "../navbar.jsx"
 import NoSsr from '../no-ssr'
 import { Box , Container} from "@chakra-ui/react"
-import Topkv from "../topkv"
+// import Topkv from "../topkv"
 
 // three表示うまくいかなかったので、いったん削除
-// import VoxelDog from '../voxel-dog'
+import VoxelDog from '../voxel-dog'
 
 const Main = ({ children, router }) => {
     return (
@@ -19,8 +19,8 @@ const Main = ({ children, router }) => {
 
             <Container maxW="container.md" pt={14}>
                 <NoSsr>
-                    <Topkv />
-                    {/* <VoxelDog /> */}
+                    {/* <Topkv /> */}
+                    <VoxelDog />
                 </NoSsr>
                 {children}
             </Container>

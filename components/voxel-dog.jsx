@@ -73,7 +73,7 @@ const VoxelDog = () => {
             controls.target = target
             setControls(controls)
 
-            loadGLTFModel(scene, '/threes/desk_no_mat.glb', {
+            loadGLTFModel(scene, '/threes/home/desk-mixin-texture.gltf', {
                 receiveShadow: true,
                 castShadow: false
             }).then(() => {
