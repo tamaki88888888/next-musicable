@@ -1,7 +1,7 @@
 import { Container, Heading, SimpleGrid} from "@chakra-ui/react";
 import Section  from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
-// import Layout from '../components/section/article'
+import Layout from '../components/section/article'
 import thumbAkitsuHP from '../public/images/works/Akitsudoro.png'
 import thumbMusicable from '../public/images/works/musicable-work.png'
 import thumbDressup from '../public/images/works/Dressup.png'
@@ -9,7 +9,7 @@ import thumbDressup from '../public/images/works/Dressup.png'
 
 const Works = () => {
     return (
-        <layout>
+        <Layout>
             <Container>
                 <Heading as="h3" fontSize={20} mb={4}>
                     Works
@@ -33,7 +33,7 @@ const Works = () => {
                     </Section>
                 </SimpleGrid>
             </Container>
-        </layout>
+        </Layout>
     )
 }
 
