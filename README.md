@@ -21,9 +21,8 @@ next@11.1.2
 
 👶 Author
 ---
-- [Github](#https://github.com/tamaki88888888)
-- [Hatena](#https://okinawanpizza.hatenablog.com/)
-- [resume](#)
+- [Github](https://github.com/tamaki88888888)
+- [Hatena](https://okinawanpizza.hatenablog.com/)
 
 🐏 Finally
 ---
