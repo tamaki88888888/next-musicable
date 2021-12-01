@@ -1,57 +1,30 @@
-![Uploading スクリーンショット 2021-11-15 10.27.23.png…]()
+<img width="427" alt="README-thumbnail" src="https://user-images.githubusercontent.com/41576561/141723239-1570b8e8-f520-47d9-aae2-4c34b50f37b1.png">
 
+📄 my portfolio 
+---
+私の経歴や好きなことについてまとめたポートフォリオサイトです。  
+https://next-musicable-five.vercel.app/
 
+React.js / Next.js / Vercel で構成されています。  
+UIはchakra UIを使用いたしました。   
 
+      
+✋ Requirement
+---
+react@17.0.2  
+next@11.1.2  
 
+🔥 Passion for ..
+---
+- 最近興味が湧いているthree.jsに挑戦しました。
+- ナイトモードを追加しました。  
 
+👶 Author
+---
+- [Github](https://github.com/tamaki88888888)
+- [Hatena](https://okinawanpizza.hatenablog.com/)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+🐏 Finally
+---
+ここまでご覧いただきありがとうございました。
+まだまだ経験は浅いですがフロントエンドエンジニアとしてより多くの人を感動させられるようにこれからも頑張ります。
