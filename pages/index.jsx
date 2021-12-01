@@ -41,7 +41,7 @@ export default function Home() {
             <Heading as="h2" variant="page-title">
               Ko Tamaki
             </Heading>
-            <p>Web Developer ( Developer / writer / music-media )</p>
+            <p>Web Developer</p>
           </Box>
           <Box
             flexShrink={0}
@@ -66,7 +66,7 @@ export default function Home() {
             Work
           </Heading>
           <Paragraph>
-            Ko is a freelance and a Front-end developer based in Tokyo and Kanagawa 
+            Ko is a Front-end developer based in Tokyo. 
             with a passion for building Homepage and Web Application.
             Especially in building HomePage, there are thousands of thousands of tips in his body.
             when not online, he loves camping with his music playlist.
@@ -106,7 +106,7 @@ export default function Home() {
           </BioSection>
           <BioSection>
             <BioYear>2022 and next</BioYear>
-            Work as a freelance
+            --------
           </BioSection>
         </Section>
         <Section delay={0.3}>
